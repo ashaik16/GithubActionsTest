@@ -39,7 +39,7 @@ public class PowerManagementTest {
 		String currentfloorPlanType2 = "LOW_PILE_CARPET";
 		String currentfloorPlanType3 = "HIGH_PILE_CARPET";
 		String previousfloorPlanType = "BARE_FOOT";
-		assertTrue(powerManagement.getUnitOfCharge(currentfloorPlanType1) == 1.0);
+		assertTrue(powerManagement.getUnitOfCharge(currentfloorPlanType1) == 2.0);
 		assertTrue(powerManagement.getUnitOfCharge(currentfloorPlanType2) == 2.0);
 		assertTrue(powerManagement.getUnitOfCharge(currentfloorPlanType3) == 3.0);
 		assertTrue(powerManagement.getUnitOfCharge(previousfloorPlanType) == 1.0);
