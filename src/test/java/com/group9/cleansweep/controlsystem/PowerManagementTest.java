@@ -44,6 +44,7 @@ public class PowerManagementTest {
 		assertTrue(powerManagement.getUnitOfCharge(currentfloorPlanType3) == 3.0);
 		assertTrue(powerManagement.getUnitOfCharge(previousfloorPlanType) == 1.0);
 
+		
 	}
 
 	@Test
