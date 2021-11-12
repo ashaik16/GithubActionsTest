@@ -54,7 +54,7 @@
   	       <artifactId>cleansweep</artifactId>
  	       <version>0.0.1-SNAPSHOT</version>
                   <type>jar</type>
-                  <outputDirectory/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/target</outputDirectory>
+                  <outputDirectory>/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/target</outputDirectory>
                   <destFileName>cleansweep-0.0.1-SNAPSHOT.jar</destFileName>
                 </artifactItem>
               </artifactItems>
