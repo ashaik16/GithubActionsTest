@@ -42,7 +42,7 @@ jobs:
            # mvn clean install -pl "/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml"/"/home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml"
            # mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/control-system/pom.xml
       - name: Deploy
-        run: mvn -B -Pgithub deploy
+        run: mvn -B  --file /home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml deploy
         env:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # Runs a set of commands using the runners shell
