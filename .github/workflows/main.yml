@@ -33,22 +33,15 @@ jobs:
 #       - name: Step 3 - Github Actions Building Maven Project
 #         run:  cd cleansweep
         
-       # Runs a set of commands using the runners shell
-      - name: Step 3 - Github Actions Building Maven Project
-        run:  mvn clean 
-        
       # Runs a set of commands using the runners shell
       - name: Step 3 - Github Actions Building Maven Project
         run:  mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml
-     # Runs a set of commands using the runners shell
-      - name: Step 3 - Github Actions Building Maven Project
-        run:  mvn clean 
-       # Runs a set of commands using the runners shell
+
+      # Runs a set of commands using the runners shell
       - name: Step 4 - Github Actions Building Maven Project
+        working-directory: mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml
         run:  mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml
-     # Runs a set of commands using the runners shell
-      - name: Step 3 - Github Actions Building Maven Project
-        run:  mvn clean 
+        
       # Runs a set of commands using the runners shell
       - name: Step 5 - Github Actions Building Maven Project
         run:  mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/control-system/pom.xml
