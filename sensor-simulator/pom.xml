@@ -36,6 +36,32 @@
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
       <plugins>
         <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+	 <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.7</version>
+        <executions>
+          <execution>
+            <id>copy</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+               <groupId>com.group9</groupId>
+  	       <artifactId>cleansweep</artifactId>
+ 	       <version>0.0.1-SNAPSHOT</version>
+                  <type>jar</type>
+                  <outputDirectory>${project.build.outputDirectory}/classes</outputDirectory>
+                  <destFileName>cleansweep-0.0.1-SNAPSHOT.jar</destFileName>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>     
         <plugin>
           <artifactId>maven-clean-plugin</artifactId>
           <version>3.1.0</version>
