@@ -29,15 +29,34 @@ jobs:
         with:
            java-version: 1.7
            
-      # Runs a set of commands using the runners shell
-      - name: Step 3 - Github Actions Building Maven Project
-        run:  mvn -B package --file pom.xml
         
-      - name: Step 4 - List the current directory
-        run:  ls -a
+      # Runs a set of commands for building Clean Sweep Maven Project
+      - name: Step 3 - Github Actions Building Clean Sweep Maven Project
+        run:  mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml
         
-      - name: Step 5 - Get the tareget folder path
+ 
+      # Runs a set of commands for building Sensor-Simulator Maven Project
+      - name: Step 4 - Github Actions Building Sensor-Simulator Maven Project
         run: | 
-         cd target
-         ls -a
-
+            mvn install:install-file -Dfile=/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/target/cleansweep-0.0.1-SNAPSHOT.jar -DgroupId=com.group9 -DartifactId=cleansweep -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar 
+            mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml
+            
+         
+        # Runs a set of commands for building Control System Maven Project
+      - name: Step 5 - Github Actions Building Maven Project
+        run: | 
+            mvn install:install-file -Dfile=/home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/target/sensor-simulator-0.0.1-SNAPSHOT.jar -DgroupId=com.group9 -DartifactId=sensor-simulator -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar 
+            mvn -B package --file  /home/runner/work/GithubActionsTest/GithubActionsTest/control-system/pom.xml
+            
+                
+      - name: Step 6 - Get the tareget folder path of Clean Sweep Project
+        run: | 
+         ls -a /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/target
+         
+      - name: Step 7 - Get the tareget folder path of Sensor Simulator Project
+        run: | 
+         ls -a /home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/target
+         
+      - name: Step 8 - Get the tareget folder path of Control System Project
+        run: | 
+         ls -a /home/runner/work/GithubActionsTest/GithubActionsTest/control-system/target

@@ -5,11 +5,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.group9</groupId>
-  <artifactId>cleansweep</artifactId>
+  <artifactId>controlsystem</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>cleansweep</name>
   <packaging>jar</packaging>	
-
+  <name>controlsystem</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -21,6 +20,17 @@
 
   <dependencies>
     <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+   <dependency>
+  <groupId>com.group9</groupId>
+  <artifactId>cleansweep</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	</dependency> 
+	   <dependency>
+	  <groupId>com.group9</groupId>
+  <artifactId>sensor-simulator</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+	</dependency>
+
     <dependency>
       <groupId>com.google.code.gson</groupId>
       <artifactId>gson</artifactId>
