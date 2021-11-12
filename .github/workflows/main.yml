@@ -37,9 +37,11 @@ jobs:
       - name: Step 3 - Github Actions Building Maven Project
         run: | 
             mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml
-            cd /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/target/
+            # cd /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/target/
             pwd
-            cp cleansweep-0.0.1-SNAPSHOT.jar
+            mvn install:install-file -Dfile=/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml -DgroupId=com.group9 -DartifactId=cleansweep -Dversion=0.0.1-SNAPSHOT
+
+            # cp cleansweep-0.0.1-SNAPSHOT.jar
             mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml
             mvn -B package --file  /home/runner/work/GithubActionsTest/GithubActionsTest/control-system/pom.xml
          
