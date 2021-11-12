@@ -39,7 +39,7 @@ jobs:
            # mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml
            # mvn clean install --projects :--file /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml,:then- --file /home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml
            # mvn -pl cleansweep -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml
-           mvn clean install -pl "/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml"/"/home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml"
+           # mvn clean install -pl "/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml"/"/home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml"
            mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/control-system/pom.xml
 
       # Runs a set of commands using the runners shell
