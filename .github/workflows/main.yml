@@ -39,7 +39,8 @@ jobs:
             mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml
             # cd /home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/target/
             pwd
-            mvn install:install-file -Dfile=/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml -DgroupId=com.group9 -DartifactId=cleansweep -Dversion=0.0.1-SNAPSHOT
+            mvn install:install-file -Dfile=/home/runner/work/GithubActionsTest/GithubActionsTest/cleansweep/pom.xml -DgroupId=com.group9 -DartifactId=cleansweep -Dversion=0.0.1-SNAPSHOT -Dpackaging=jar
+ 
 
             # cp cleansweep-0.0.1-SNAPSHOT.jar
             mvn -B package --file /home/runner/work/GithubActionsTest/GithubActionsTest/sensor-simulator/pom.xml
